@@ -12,8 +12,6 @@ const prematureReturn = (n, r) => {
 /**
  * Find the largest number in the array.
  * 
- * Runs in logarithmic time
- * 
  * Time Complexity = O(n) ==> Linear
  * Space Complexity = O(n) ==> Linear
  * 
