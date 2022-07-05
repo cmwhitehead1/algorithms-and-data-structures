@@ -1,6 +1,6 @@
 const verify = require('../util/verify')
 
-const testAllCases = false
+const testAllCases = false;
 
 /**
  * Keep splitting the dataset in half until you find your target.

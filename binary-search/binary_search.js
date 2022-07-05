@@ -1,19 +1,15 @@
 const verify = require('../util/verify')
 const { RANDOM_DATA_SET, SORTED_DATA_SET } = require('../data-set')
 
-const testAllCases = false
-
-console.log(SORTED_DATA_SET)
+const testAllCases = false;
 
 /**
  * Keep splitting the dataset in half until you find your target.
  * 
  * Iterative Approach
  * 
- * Time Complexity = O(log n)
- * Space Complexity = O(n) == Constant Space
- * 
- * The while loop is what makes this a logarithmic run time..
+ * Time Complexity = O(log n) ==> Logarithmic
+ * Space Complexity = O(n) ===> Constant Space
  * 
  * @param {*} list (NEEDS to be sorted)
  * @param {*} targetItem 
