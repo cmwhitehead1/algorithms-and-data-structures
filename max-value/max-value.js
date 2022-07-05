@@ -5,8 +5,9 @@ const testAllCases = false;
 
 // For Asymptotic reasons abstracting out the premature return;
 
+// Complexity is 3
 const prematureReturn = (n, r) => {
-	if (n.length === 1) return r;
+  if (n.length === 1) return r;
 }
 
 /**
@@ -19,27 +20,28 @@ const prematureReturn = (n, r) => {
  * @returns largest number in array.
  */
 
+// Complexity is 4
 const maxValue = (nums) => {
-	let max = nums[0]; // initial max;
-	// let i = 1;
+  let max = nums[0]; // initial max;
+  // let i = 1;
 
-	prematureReturn(nums, max); // if only one value in array return it.
+  prematureReturn(nums, max); // if only one value in array return it.
 
-	// while (i <= nums.length) {
-	// 	if(nums[i] > max){
-	// 		max = nums[i];
-	// 	}
-	// 	i++;
-	// }
+  // while (i <= nums.length) {
+  // 	if(nums[i] > max){
+  // 		max = nums[i];
+  // 	}
+  // 	i++;
+  // }
 
-	for (let i = 1, len = nums.length; i <= len; i++) {
-		if (nums[i] > max) {
-			max = nums[i]
-		}
-	}
+  for (let i = 1, len = nums.length; i <= len; i++) {
+    if (nums[i] > max) {
+      max = nums[i]
+    }
+  }
 
-	console.log(max)
-	return max;
+  console.log(max)
+  return max;
 };
 
 /**
@@ -48,17 +50,17 @@ const maxValue = (nums) => {
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
 if (testAllCases) {
-	const numbersToFind = [8, 13, 6, 14, 2, 10, 15, 3, 9, 5, 12, 4, 7, 11, 1, 17, -1];
-	numbersToFind.map((item) => {
-		verify(binary_search(numbers, item))
-	})
+  const numbersToFind = [8, 13, 6, 14, 2, 10, 15, 3, 9, 5, 12, 4, 7, 11, 1, 17, -1];
+  numbersToFind.map((item) => {
+    verify(binary_search(numbers, item))
+  })
 } else {
 
-	console.time('max-value');
+  console.time('max-value');
 
-	verify(maxValue(RANDOM_DATA_SET));
-	verify(maxValue(RANDOM_DATA_SET2));
-	verify(maxValue(RANDOM_DATA_SET3));
+  verify(maxValue(RANDOM_DATA_SET));
+  verify(maxValue(RANDOM_DATA_SET2));
+  verify(maxValue(RANDOM_DATA_SET3));
 
-	console.timeEnd('max-value');
+  console.timeEnd('max-value');
 }
